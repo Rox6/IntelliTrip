@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Dein Reiseplan von IntelliTrip</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background-color: #ffffff;
+    }
+
+    /* === Cover-Seite bleibt unverändert === */
+    .cover-page {
+        height: 100vh;
+        background-image: linear-gradient(rgba(248, 248, 248, 0.919), rgba(252, 254, 255, 0.979)), url('https://imgur.com/a/Neqkv27'); /* Paris */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .cover-page .logo {
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .cover-page h1 {
+        font-size: 48px;
+        margin: 0;
+    }
+
+    .cover-page h2 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    
+    /* === ANGEPASSTE STILE FÜR DIE INHALTSSEITEN === */
+    .page {
+        padding: 0; /* Padding entfernt, damit der Banner die volle Breite einnehmen kann */
+        page-break-before: always;
+    }
+
+    /* === NEUE STILE für den Header-Banner === */
+    .page-top-banner {
+        position: relative;
+        width: 100%;
+        height: 250px; /* Höhe des Banners anpassen */
+        color: white; /* Textfarbe für den Overlay-Text */
+    }
+
+    .header-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Stellt sicher, dass das Bild den Container füllt, ohne das Seitenverhältnis zu verzerren */
+        display: block;
+    }
+
+    /* === ANGEPASSTE STILE für den alten Header, der jetzt ein Overlay ist === */
+    .page-header {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px; /* Padding für den Text im Banner */
+        box-sizing: border-box;
+        border-bottom: none; /* Der alte Rand wird nicht mehr benötigt */
+        /* Verlauf für bessere Lesbarkeit des Textes auf dem Bild */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    }
+    
+    .page-header .logo-small {
+        max-width: 120px;
+    }
+    
+    /* === NEUER Container für den Seiteninhalt mit dem ursprünglichen Padding === */
+    .page-content {
+        padding: 40px;
+    }
+
+    h1, h2, h3 {
+        color: #00A0B0;
+    }
+
+    h2 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+        margin-top: 40px;
+    }
+
+    .recommendation {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .rec-icon {
+        font-size: 24px;
+        color: #00A0B0;
+        margin-top: 5px;
+    }
+
+    .rec-details h3 {
+        margin: 0 0 5px 0;
+        font-size: 18px;
+    }
+
+    .rec-details p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .city-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px 40px; /* Etwas Padding hinzugefügt */
+        font-size: 12px;
+        color: #888;
+        border-top: 1px solid #eee;
+        margin-top: 40px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- === COVER PAGE (unverändert) === -->
+<div class="cover-page">
+    <img src="statics\WhatsApp Bild 2025-07-05 um 19.51.59_d976f3ec.jpg" alt="IntelliTrip Logo" class="logo">
+    <h1>Dein Reiseplan für [Stadt]</h1>
+    <h2>Vorbereitet für [Name der Person]</h2>
+</div>
+
+<!-- === ITINERARY DAY 1 (mit neuem Header) === -->
+<div class="page">
+    <!-- NEUER HEADER-BANNER -->
+    <div class="page-top-banner">
+       
+        <img src="statics\WhatsApp Bild 2025-07-05 um 20.01.48_060912a4.jpg" alt="Header Bild für [Stadt]" class="header-image">
+        <div class="page-header">
+            <!--img src="statics\WhatsApp Bild 2025-07-05 um 19.51.59_d976f3ec.jpg" alt="IntelliTrip Logo" class="logo-small">!-->
+            <span>[Stadt] | [Datum Tag 1]</span>
+        </div>
+    </div>
+
+    <!-- Container für den restlichen Seiteninhalt -->
+    <div class="page-content">
+        <h1>Tag 1: Ankunft & Erste Entdeckungen</h1>
+        <p>Willkommen in [Stadt]! Nachdem du in deinem Hotel eingecheckt hast, ist es Zeit für erste Erkundungen. Hier sind einige Vorschläge basierend auf deinen Interessen.</p>
+
+        <img src="https://imgur.com/a/jLgDyGt" alt="Berlin" class="city-image">
+
+        <h2>Kultur & Geschichte</h2>
+        <div class="recommendation">
+            <span class="rec-icon">🏛️</span>
+            <div class="rec-details">
+                <h3>[Empfehlung Kultur 1 Name]</h3>
+                <p>[Beschreibung der Kulturempfehlung 1, z.B. "Ein Muss für jeden Besucher. Plane ca. 2-3 Stunden ein. Öffnungszeiten: 10:00 - 18:00 Uhr."]</p>
+            </div>
+        </div>
+        <h2>Essen & Trinken</h2>
+        <div class="recommendation">
+            <span class="rec-icon">🍽️</span>
+            <div class="rec-details">
+                <h3>Abendessen im [Restaurant-Empfehlung 1 Name]</h3>
+                <p>[Beschreibung der Restaurant-Empfehlung, z.B. "Authentische lokale Küche in einem charmanten Ambiente. Eine Reservierung wird empfohlen."]</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- === ITINERARY DAY 2 (mit neuem Header) === -->
+<div class="page">
+    <!-- NEUER HEADER-BANNER -->
+    <div class="page-top-banner">
+        <!-- Platzhalter für das Header-Bild -->
+        <img src="statics\WhatsApp Bild 2025-07-05 um 20.01.48_060912a4.jpg" alt="Header Bild für [Stadt]" class="header-image">
+        <div class="page-header">
+            <!--img src="statics\WhatsApp Bild 2025-07-05 um 19.51.59_d976f3ec.jpg" alt="IntelliTrip Logo" class="logo-small"!-->
+            <span>[Stadt] | [Datum Tag 2]</span>
+        </div>
+    </div>
+    
+    <!-- Container für den restlichen Seiteninhalt -->
+    <div class="page-content">
+        <h1>Tag 2: Eintauchen in die Stadt</h1>
+        <p>Heute geht es tiefer in das Herz von [Stadt]. Genieße die Atmosphäre und entdecke verborgene Schätze.</p>
+
+        <img src="https://images.unsplash.com/photo-1581294823353-524f3c59704e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Rom" class="city-image">
+
+        <h2>Natur & Entspannung</h2>
+        <div class="recommendation">
+            <span class="rec-icon">🌳</span>
+            <div class="rec-details">
+                <h3>Spaziergang im [Park/Garten Name]</h3>
+                <p>[Beschreibung der Natur-Empfehlung, z.B. "Die grüne Lunge der Stadt. Perfekt für eine kleine Auszeit vom Trubel."]</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- === FOOTER on last page === -->
+<div class="footer">
+    <p><strong>IntelliTrip - Travel Made Smart</strong></p>
+    <p>IntelliTrip GmbH<br>Mustermann-Straße 123<br>10115 Berlin, Deutschland</p>
+    <p>Dieser Reiseplan wurde automatisch basierend auf deinen Interessen erstellt. Wir wünschen dir eine unvergessliche Reise!</p>
+</div>
+
+</div>
+</body>
+</html>
